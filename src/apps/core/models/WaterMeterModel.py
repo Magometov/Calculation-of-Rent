@@ -16,3 +16,7 @@ class WaterMeter(models.Model):
         on_delete=models.CASCADE,
         verbose_name="Квартира",
     )
+    serial_number = models.CharField(verbose_name="Серийный номер", max_length=50)
+
+    def __str__(self):
+        return f"{self.apartment}"

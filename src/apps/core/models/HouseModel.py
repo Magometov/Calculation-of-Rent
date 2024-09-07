@@ -18,3 +18,6 @@ class House(models.Model):
     )
     district = models.CharField(verbose_name="Район", max_length=100)
     address = models.CharField(verbose_name="Адрес", max_length=100)
+
+    def __str__(self):
+        return f"{self.get_city_display()} {self.address}"

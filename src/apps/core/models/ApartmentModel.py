@@ -16,4 +16,8 @@ class Apartment(models.Model):
         on_delete=models.CASCADE,
         verbose_name="Дом",
     )
+    number = models.PositiveSmallIntegerField(verbose_name="Номер квартиры")
     square = models.PositiveIntegerField(verbose_name="Площадь")
+
+    def __str__(self):
+        return f"{self.house} {self.number}"
