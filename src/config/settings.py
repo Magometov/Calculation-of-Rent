@@ -18,6 +18,7 @@ ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS").split(" ")
 # ======================================================================================================================
 
 INSTALLED_APPS = [
+    # base
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -25,6 +26,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "django.contrib.postgres",
+    # applications
+    "src.apps.core.apps.CoreConfig",
 ]
 
 # ======================================================================================================================
