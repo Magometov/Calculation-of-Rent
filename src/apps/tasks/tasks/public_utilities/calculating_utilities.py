@@ -8,6 +8,10 @@ from src.config.celery import app
 
 logger = logging.getLogger("django")
 
+"""
+Результат работы таски можно было собирать в exel таблицу и отправлять в тг или на почту, например.
+"""
+
 
 @shared_task(queue="periodic")
 def utilities_data(house_id):
