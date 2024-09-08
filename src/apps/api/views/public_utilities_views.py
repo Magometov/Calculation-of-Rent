@@ -13,8 +13,6 @@ logger = logging.getLogger("django")
 @api_view(["POST"])
 def call_task_for_calculating_utilities(request):
     house_id = request.data.get("house_id")
-    logger.warning("*" * 55)
-    logger.warning("Я блять во вьюзе сука")
     if house_id is None:
         return Response({"detail": "id дома не передан"}, status=status.HTTP_400_BAD_REQUEST)
 
