@@ -8,7 +8,7 @@ from src.apps.api.serializers.house import HouseSerializer
 from src.apps.core.models import House
 
 
-@api_view(["GET"])
+@api_view(["POST"])
 def get_house_data(request):
     house_id = request.data.get("house_id")
 

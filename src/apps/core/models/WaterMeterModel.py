@@ -19,4 +19,4 @@ class WaterMeter(models.Model):
     serial_number = models.CharField(verbose_name="Серийный номер", max_length=50)
 
     def __str__(self):
-        return f"{self.apartment}"
+        return f"{self.serial_number} | {self.apartment}"

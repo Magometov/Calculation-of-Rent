@@ -16,4 +16,9 @@ class Price(models.Model):
         on_delete=models.CASCADE,
         verbose_name="Дом",
     )
-    cost = models.PositiveSmallIntegerField(verbose_name="Цена")
+
+    price_for_water_supply = models.PositiveSmallIntegerField(verbose_name="Цена за водоснабжение", default=0)
+    price_for_area = models.PositiveSmallIntegerField(verbose_name="Цена за площадь", default=0)
+
+    def __str__(self):
+        return f"{self.house}"

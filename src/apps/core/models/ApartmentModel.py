@@ -20,4 +20,4 @@ class Apartment(models.Model):
     square = models.PositiveIntegerField(verbose_name="Площадь")
 
     def __str__(self):
-        return f"{self.house} {self.number}"
+        return f"{self.house} кв.{self.number}"

@@ -4,7 +4,7 @@ from src.apps.core.models import WaterMeterReading
 
 
 class WaterMeterReadingSerializer(serializers.ModelSerializer):
-    date = serializers.CharField(source="get_date_display")
+    date = serializers.DateField(format="%m.%Y")
 
     class Meta:
         model = WaterMeterReading
